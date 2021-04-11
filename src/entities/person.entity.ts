@@ -10,5 +10,9 @@ export default class Person {
   private readonly age: number
   private readonly sex: TSex
 
-  constructor(props: Props) {}
+  constructor(props: Props) {
+    this.name = props.name
+    this.age = props.age
+    this.sex = props.sex
+  }
 }
