@@ -9,7 +9,7 @@ describe('Person Entity', () => {
       age: 30,
       sex: 'male'
     })
-    })
+  })
 
   test('ensures that entity was created', () => {
     expect(entity.name).toBe('Matheus')
@@ -25,4 +25,17 @@ describe('Person Entity', () => {
     })
   })
 
+  test('ensures that when calling toString, the object returns the values', () => {
+    entity.update({
+      name: 'Matheus Flauzino',
+      age: 32,
+      sex: 'male'
+    })
+
+    expect(entity.toString()).toEqual({
+      name: 'Matheus Flauzino',
+      age: 32,
+      sex: 'male'
+    })
+  })
 })
