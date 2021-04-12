@@ -6,9 +6,9 @@ export type Props = {
 }
 
 export default class Person {
-  private readonly _name: string
-  private readonly _age: number
-  private readonly _sex: TSex
+  private _name: string
+  private _age: number
+  private _sex: TSex
 
   constructor(props: Props) {
     this._name = props.name
@@ -27,4 +27,13 @@ export default class Person {
   get sex(): TSex {
     return this._sex
   }
+
+  public toString(): Props {
+    return {
+      name: this._name,
+      age: this._age,
+      sex: this._sex
+    }
+  }
+
 }
