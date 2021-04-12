@@ -36,4 +36,9 @@ export default class Person {
     }
   }
 
+  public update(props: Props): void {
+    this._name = props.name
+    this._age = props.age
+    this._sex = props.sex
+  }
 }
