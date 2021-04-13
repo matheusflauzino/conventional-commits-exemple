@@ -56,4 +56,8 @@ export default class Person {
     return false
   }
 
+  public persist(): boolean {
+    if (this.valid()) return true
+    return false
+  }
 }
