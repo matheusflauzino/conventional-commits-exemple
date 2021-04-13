@@ -6,6 +6,7 @@ describe('Person Entity', () => {
   beforeEach(() => {
     entity = new Person({
       name: 'Matheus',
+      surname: 'Flauzino',
       age: 30,
       sex: 'male'
     })
@@ -13,6 +14,7 @@ describe('Person Entity', () => {
 
   test('ensures that entity was created', () => {
     expect(entity.name).toBe('Matheus')
+    expect(entity.surname).toBe('Flauzino')
     expect(entity.age).toBe(30)
     expect(entity.sex).toBe('male')
   })
@@ -20,6 +22,7 @@ describe('Person Entity', () => {
   test('ensures that when calling toString, the object returns the values', () => {
     expect(entity.toString()).toEqual({
       name: 'Matheus',
+      surname: 'Flauzino',
       age: 30,
       sex: 'male'
     })
@@ -27,13 +30,15 @@ describe('Person Entity', () => {
 
   test('ensures that when calling toString, the object returns the values', () => {
     entity.update({
-      name: 'Matheus Flauzino',
+      name: 'Matheus',
+      surname: 'Flauzino',
       age: 32,
       sex: 'male'
     })
 
     expect(entity.toString()).toEqual({
-      name: 'Matheus Flauzino',
+      name: 'Matheus',
+      surname: 'Flauzino',
       age: 32,
       sex: 'male'
     })
