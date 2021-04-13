@@ -50,4 +50,10 @@ export default class Person {
     this._age = props.age
     this._sex = props.sex
   }
+
+  public valid(): boolean {
+    if (this._name && this._age) return true
+    return false
+  }
+
 }
