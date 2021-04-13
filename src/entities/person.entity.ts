@@ -23,7 +23,7 @@ export default class Person {
     return this._name
   }
 
-  get surnamename(): string {
+  get surname(): string {
     return this._surname
   }
 
